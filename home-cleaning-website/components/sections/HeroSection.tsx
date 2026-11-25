@@ -271,7 +271,7 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             </div>
 
             {/* 6. Social Proof Rating Strip: Refined 2-column mobile layout with zero overflow */}
-            <div className="flex items-center gap-3.5 sm:gap-6 lg:gap-8 pt-1.5 max-w-full">
+            <div className="flex items-center gap-4.5 sm:gap-6 lg:gap-8 pt-1.5 max-w-full">
               {/* Left: 5 Stars & 4.8/5 Customer Rating */}
               <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                 <div className="flex items-center gap-0.5 sm:gap-1 text-[#F59E0B] shrink-0">
