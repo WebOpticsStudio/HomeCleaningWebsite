@@ -6,7 +6,7 @@ import { Star, Home, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface ReviewItem {
   name: string;
-  initial: string;
+  avatar: string;
   rating: number;
   text: string;
 }
@@ -15,51 +15,51 @@ export function ReviewsSection() {
   const reviews: ReviewItem[] = [
     {
       name: "Priya S.",
-      initial: "P",
+      avatar: "/images/avatar_priya_v2.jpg",
       rating: 5,
-      text: "Very professional and thorough. Our home feels fresh and clean!",
+      text: "Very professional and thorough. Our home feels fresh, spotless and clean!",
     },
     {
       name: "Rahul K.",
-      initial: "R",
+      avatar: "/images/avatar_rahul_v2.jpg",
       rating: 5,
-      text: "Excellent service. The team was punctual and very courteous.",
+      text: "Excellent service. The team was punctual, polite and very courteous.",
     },
     {
       name: "Neha M.",
-      initial: "N",
+      avatar: "/images/avatar_neha_v2.jpg",
       rating: 5,
-      text: "Amazing deep cleaning! Every corner was spotless.",
+      text: "Amazing deep cleaning! Every single corner was spotless and fresh.",
     },
     {
       name: "Sneha R.",
-      initial: "S",
+      avatar: "/images/avatar_sneha.jpg",
       rating: 5,
-      text: "Highly recommended! Professional, friendly and great results.",
+      text: "Highly recommended! Professional, friendly and wonderful results.",
     },
     {
       name: "Amit V.",
-      initial: "A",
+      avatar: "/images/avatar_amit.jpg",
       rating: 5,
       text: "Booked a move-out clean and got 100% of my deposit back. Spotless!",
     },
     {
       name: "Ananya P.",
-      initial: "A",
+      avatar: "/images/avatar_ananya.jpg",
       rating: 5,
       text: "The kitchen and bathrooms look brand new. Outstanding attention to detail.",
     },
     {
       name: "Karan D.",
-      initial: "K",
+      avatar: "/images/avatar_karan.jpg",
       rating: 5,
-      text: "Reliable and thorough every single week. Best cleaning service in town!",
+      text: "Reliable, punctual and thorough every single week. Best service in town!",
     },
     {
       name: "Sunita G.",
-      initial: "S",
+      avatar: "/images/avatar_sunita.jpg",
       rating: 5,
-      text: "Eco-friendly products smell wonderful and are safe for our pets and kids.",
+      text: "Eco-friendly products that smell wonderful and are safe for kids and pets.",
     },
   ];
 
@@ -101,19 +101,12 @@ export function ReviewsSection() {
 
   const handleTransitionEnd = () => {
     if (position >= BASE_INDEX * 2) {
-      // Seamlessly jump back to middle set
       setIsTransitioning(false);
       setPosition(position - BASE_INDEX);
     } else if (position < BASE_INDEX) {
-      // Seamlessly jump forward to middle set
       setIsTransitioning(false);
       setPosition(position + BASE_INDEX);
     }
-  };
-
-  const handleDotClick = (index: number) => {
-    setIsTransitioning(true);
-    setPosition(BASE_INDEX + index);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -137,11 +130,8 @@ export function ReviewsSection() {
     setTouchStartX(null);
   };
 
-  // Compute active dot index (0 to 7)
-  const activeDot = ((position - BASE_INDEX) % reviews.length + reviews.length) % reviews.length;
-
   return (
-    <section id="reviews" className="relative py-14 sm:py-18 lg:py-22 overflow-hidden bg-[#FBFDFB]">
+    <section id="reviews" className="relative py-10 sm:py-12 lg:py-14 overflow-hidden bg-[#FBFDFB]">
       {/* Background with Organic Foliage: top-left leaves */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
@@ -149,13 +139,13 @@ export function ReviewsSection() {
           alt=""
           fill
           priority={false}
-          className="object-cover object-center opacity-95"
+          className="object-cover object-center opacity-90"
           sizes="100vw"
         />
       </div>
 
       {/* Mirrored bottom-right foliage accent */}
-      <div className="absolute -bottom-16 -right-16 w-[360px] h-[360px] pointer-events-none -z-0 rotate-180 opacity-80">
+      <div className="absolute -bottom-16 -right-16 w-[320px] h-[320px] pointer-events-none -z-0 rotate-180 opacity-75">
         <Image
           src="/images/services_bg.jpg"
           alt=""
@@ -167,23 +157,22 @@ export function ReviewsSection() {
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
           {/* Eyebrow with Divider Lines */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-3.5">
-            <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.14em]">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2 sm:mb-2.5">
+            <div className="h-[1px] w-10 sm:w-14 bg-[#2E9A00]/30 rounded-full" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.12em]">
               <Home className="w-3.5 h-3.5 text-[#102B4E]" />
               <span>WHAT OUR CUSTOMERS SAY</span>
             </div>
-            <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />
+            <div className="h-[1px] w-10 sm:w-14 bg-[#2E9A00]/30 rounded-full" />
           </div>
 
           {/* Main Headline with Serif Typography and Green Underline Flourish */}
-          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.18] mb-2 sm:mb-2.5">
+          <h2 className="text-[26px] sm:text-[32px] lg:text-[38px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.18] mb-1.5 sm:mb-2">
             Real Homes.{" "}
             <span className="relative inline-block text-[#2E9A00]">
               Real Happiness.
-              {/* Subtle green underline flourish */}
               <svg
                 className="absolute -bottom-1 left-0 w-full h-2.5 text-[#2E9A00] pointer-events-none"
                 viewBox="0 0 200 10"
@@ -200,22 +189,22 @@ export function ReviewsSection() {
             </span>
           </h2>
 
-          {/* Supporting Subtitle */}
-          <p className="text-[14px] sm:text-[15.5px] text-[#4A5D73] font-normal leading-relaxed max-w-[620px] mx-auto">
+          {/* Single-line Subtitle Description on Tablet & Desktop */}
+          <p className="text-[13.5px] sm:text-[14.5px] text-[#4A5D73] font-normal leading-normal whitespace-normal sm:whitespace-nowrap">
             Don&apos;t just take our word for it. Hear from families who trust us to keep their homes sparkling clean.
           </p>
         </div>
 
-        {/* Carousel Slider with Navigation Arrows */}
-        <div className="relative px-2 sm:px-6 lg:px-8">
+        {/* Carousel Slider with Navigation Arrows (Clean bottom without pagination dots) */}
+        <div className="relative px-6 sm:px-8 lg:px-8">
           {/* Left Arrow Button */}
           <button
             type="button"
             onClick={handlePrev}
             aria-label="Previous review"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
           >
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
           </button>
 
           {/* Carousel Viewport */}
@@ -238,14 +227,21 @@ export function ReviewsSection() {
                   style={{ width: `${(1 / extendedReviews.length) * 100}%` }}
                   className="px-2 sm:px-2.5 flex"
                 >
-                  <div className="bg-white rounded-[20px] border border-[#EAF0EA] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(46,154,0,0.08)] hover:border-[#2E9A00]/30 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-start w-full">
-                    {/* Top Row: Letter Avatar + Name & Stars */}
-                    <div className="flex items-center gap-3.5 mb-3.5">
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#EAF5E9] text-[#1E7B49] font-bold text-[18px] sm:text-[19px] flex items-center justify-center shrink-0">
-                        {review.initial}
+                  <div className="bg-white rounded-[20px] border border-[#EAF0EA] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(46,154,0,0.08)] hover:border-[#2E9A00]/30 transition-all duration-300 p-5 sm:p-5.5 flex flex-col justify-start w-full min-h-[145px] sm:min-h-[155px]">
+                    {/* Top Row: Real Person Portrait Avatar + Name & Stars */}
+                    <div className="flex items-center gap-3.5 mb-3">
+                      <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden shrink-0 border border-neutral-100 shadow-xs">
+                        <Image
+                          src={review.avatar}
+                          alt={review.name}
+                          width={44}
+                          height={44}
+                          className="w-full h-full object-cover"
+                          loading="eager"
+                        />
                       </div>
-                      <div className="flex flex-col">
-                        <span className="font-bold text-[15px] sm:text-[16px] text-[#102B4E] leading-tight">
+                      <div className="flex flex-col min-w-0">
+                        <span className="font-bold text-[15px] sm:text-[15.5px] text-[#102B4E] leading-tight">
                           {review.name}
                         </span>
                         <div className="flex items-center gap-0.5 mt-1 text-[#F59E0B]">
@@ -256,8 +252,8 @@ export function ReviewsSection() {
                       </div>
                     </div>
 
-                    {/* Testimonial Quote */}
-                    <p className="text-[13.5px] sm:text-[14px] text-[#334155] leading-relaxed font-normal">
+                    {/* Complete Review Text with Comfortable Line Height */}
+                    <p className="text-[13px] sm:text-[13.5px] text-[#334155] font-normal leading-[1.6]">
                       &ldquo;{review.text}&rdquo;
                     </p>
                   </div>
@@ -271,27 +267,10 @@ export function ReviewsSection() {
             type="button"
             onClick={handleNext}
             aria-label="Next review"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
           >
-            <ChevronRight className="w-5 h-5 text-gray-700" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
           </button>
-        </div>
-
-        {/* 8 Pagination Indicator Dots */}
-        <div className="flex items-center justify-center gap-2 mt-7 sm:mt-8">
-          {reviews.map((_, dotIdx) => (
-            <button
-              key={dotIdx}
-              type="button"
-              onClick={() => handleDotClick(dotIdx)}
-              aria-label={`Go to review ${dotIdx + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                activeDot === dotIdx
-                  ? "w-2.5 bg-[#102B4E]"
-                  : "w-2.5 bg-[#CBD5E1] hover:bg-[#94A3B8]"
-              }`}
-            />
-          ))}
         </div>
       </div>
     </section>
