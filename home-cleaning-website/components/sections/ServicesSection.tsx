@@ -22,7 +22,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     {
       id: "basic-cleaning",
       title: "Basic Home Cleaning",
-      description: "Keep your home neat and fresh with essential everyday cleaning.",
+      description: "Keep your home fresh and tidy with everyday dusting, sweeping and mopping.",
       price: "₹2,000",
       image: "/images/service_basic_cleaning.jpg",
       alt: "Bright clean sunlit living room",
@@ -30,7 +30,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     {
       id: "deep-cleaning",
       title: "Deep Cleaning",
-      description: "A detailed top-to-bottom clean that tackles built-up dirt and grime.",
+      description: "Remove stubborn dirt and hidden grime with a thorough top-to-bottom clean.",
       price: "₹2,500",
       image: "/images/service_deep_cleaning.jpg",
       alt: "Living room sofa with green and blue pillows on coffee table",
@@ -38,7 +38,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     {
       id: "kitchen-cleaning",
       title: "Kitchen Cleaning",
-      description: "Remove grease and stubborn stains for a cleaner cooking space.",
+      description: "Get rid of grease, stains and built-up dirt for a fresh, hygienic kitchen.",
       price: "₹2,500",
       image: "/images/service_kitchen.jpg",
       alt: "Sparkling modern clean kitchen with white cabinets and stove",
@@ -46,7 +46,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     {
       id: "bathroom-cleaning",
       title: "Bathroom Cleaning",
-      description: "Eliminate soap residue, stains and grime for a spotless bathroom.",
+      description: "Remove soap scum, stains and grime for a sparkling, fresh bathroom.",
       price: "₹1,500",
       image: "/images/service_bathroom.jpg",
       alt: "Modern clean bathroom with glass shower, sink and mirror",
@@ -54,7 +54,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
     {
       id: "move-in-out",
       title: "Move In / Move Out Cleaning",
-      description: "Get your new or vacated home thoroughly cleaned and ready.",
+      description: "Move into a fresh home or leave your old space spotless and ready.",
       price: "₹5,000",
       image: "/images/service_move_in.jpg",
       alt: "Bright empty sunlit room with hardwood floors and moving boxes",
@@ -111,7 +111,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
           </h2>
 
           {/* Supporting Subtitle */}
-          <p className="text-[14.5px] sm:text-[15.5px] text-[#4A5D73] font-medium leading-relaxed">
+          <p className="text-[14px] sm:text-[15.5px] text-[#4A5D73] font-medium leading-relaxed max-w-[290px] sm:max-w-none mx-auto">
             Professional cleaning solutions for every corner of your home.
           </p>
         </div>
@@ -132,8 +132,8 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
               index === 3
                 ? "sm:col-span-1 sm:col-start-auto lg:col-span-2 lg:col-start-2"
                 : index === 4
-                ? "sm:col-span-2 sm:max-w-[calc(50%-12px)] sm:mx-auto lg:max-w-none lg:col-span-2"
-                : "sm:col-span-1 lg:col-span-2";
+                  ? "sm:col-span-2 sm:max-w-[calc(50%-12px)] sm:mx-auto lg:max-w-none lg:col-span-2"
+                  : "sm:col-span-1 lg:col-span-2";
 
             return (
               <div

@@ -1,168 +1,299 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Star, ArrowRight, X } from "lucide-react";
+import { Star, Home, ChevronLeft, ChevronRight } from "lucide-react";
+
+interface ReviewItem {
+  name: string;
+  initial: string;
+  rating: number;
+  text: string;
+}
 
 export function ReviewsSection() {
-  const [showAllReviewsModal, setShowAllReviewsModal] = useState(false);
-
-  const reviews = [
+  const reviews: ReviewItem[] = [
     {
       name: "Priya S.",
-      location: "Verified Homeowner",
-      avatar: "/images/avatar_priya.jpg",
+      initial: "P",
       rating: 5,
-      text: "Amazing service! My home has never looked this clean. The team was professional, friendly and on time.",
+      text: "Very professional and thorough. Our home feels fresh and clean!",
     },
     {
       name: "Rahul K.",
-      location: "Recurring Client",
-      avatar: "/images/avatar_rahul.jpg",
+      initial: "R",
       rating: 5,
-      text: "Super easy to book and the results are always excellent. Highly recommend HomeShine!",
+      text: "Excellent service. The team was punctual and very courteous.",
     },
     {
       name: "Neha M.",
-      location: "Apartment Resident",
-      avatar: "/images/avatar_neha.jpg",
+      initial: "N",
       rating: 5,
-      text: "Reliable, trustworthy and thorough. It's such a relief coming home to a clean house every week!",
+      text: "Amazing deep cleaning! Every corner was spotless.",
     },
-  ];
-
-  const additionalReviews = [
+    {
+      name: "Sneha R.",
+      initial: "S",
+      rating: 5,
+      text: "Highly recommended! Professional, friendly and great results.",
+    },
     {
       name: "Amit V.",
-      location: "Deep Clean Client",
-      avatar: "/images/avatar_rahul.jpg",
+      initial: "A",
       rating: 5,
-      text: "Booked a move-out clean and got 100% of my security deposit back. Spotless kitchen and bathroom!",
+      text: "Booked a move-out clean and got 100% of my deposit back. Spotless!",
     },
     {
-      name: "Sunita G.",
-      location: "Bi-Weekly Clean",
-      avatar: "/images/avatar_priya.jpg",
+      name: "Ananya P.",
+      initial: "A",
       rating: 5,
-      text: "The eco-friendly products smell amazing and don't trigger my allergies. The cleaners are polite and gentle around our pets.",
+      text: "The kitchen and bathrooms look brand new. Outstanding attention to detail.",
     },
     {
       name: "Karan D.",
-      location: "Townhome Owner",
-      avatar: "/images/avatar_neha.jpg",
+      initial: "K",
       rating: 5,
-      text: "Exceptional attention to baseboards and window tracks. Communication was seamless from booking to completion.",
+      text: "Reliable and thorough every single week. Best cleaning service in town!",
+    },
+    {
+      name: "Sunita G.",
+      initial: "S",
+      rating: 5,
+      text: "Eco-friendly products smell wonderful and are safe for our pets and kids.",
     },
   ];
 
+  // Triplicate reviews to allow smooth, seamless infinite scrolling in both directions
+  const extendedReviews = [...reviews, ...reviews, ...reviews];
+  const BASE_INDEX = reviews.length; // 8
+
+  const [position, setPosition] = useState(BASE_INDEX);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const [cardsPerView, setCardsPerView] = useState(4);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  // Responsive cardsPerView detection
+  useEffect(() => {
+    const updateCardsPerView = () => {
+      if (window.innerWidth < 640) {
+        setCardsPerView(1);
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2);
+      } else {
+        setCardsPerView(4);
+      }
+    };
+
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
+
+  const handleNext = () => {
+    setIsTransitioning(true);
+    setPosition((prev) => prev + 1);
+  };
+
+  const handlePrev = () => {
+    setIsTransitioning(true);
+    setPosition((prev) => prev - 1);
+  };
+
+  const handleTransitionEnd = () => {
+    if (position >= BASE_INDEX * 2) {
+      // Seamlessly jump back to middle set
+      setIsTransitioning(false);
+      setPosition(position - BASE_INDEX);
+    } else if (position < BASE_INDEX) {
+      // Seamlessly jump forward to middle set
+      setIsTransitioning(false);
+      setPosition(position + BASE_INDEX);
+    }
+  };
+
+  const handleDotClick = (index: number) => {
+    setIsTransitioning(true);
+    setPosition(BASE_INDEX + index);
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches && e.touches[0]) {
+      setTouchStartX(e.touches[0].clientX);
+    }
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null || !e.changedTouches || !e.changedTouches[0]) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        handleNext();
+      } else {
+        handlePrev();
+      }
+    }
+    setTouchStartX(null);
+  };
+
+  // Compute active dot index (0 to 7)
+  const activeDot = ((position - BASE_INDEX) % reviews.length + reviews.length) % reviews.length;
+
   return (
-    <section id="reviews" className="py-12 bg-white border-b border-[#F0F4F1]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
-          <div>
-            <div className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#176B43] mb-1.5">
-              WHAT OUR CUSTOMERS SAY
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#151B19] tracking-tight">
-              Real Homes. Real Happiness.
-            </h2>
-          </div>
-
-          <button
-            onClick={() => setShowAllReviewsModal(true)}
-            className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#151B19] hover:text-[#176B43] transition-colors cursor-pointer group self-start sm:self-auto"
-          >
-            <span>View All Reviews</span>
-            <ArrowRight className="w-4 h-4 text-[#176B43] group-hover:translate-x-1 transition-transform" />
-          </button>
-        </div>
-
-        {/* Exactly 3 review cards in 1 row on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {reviews.map((review, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl border border-[#E8ECE9] p-5 shadow-subtle hover:shadow-card hover:border-[#176B43]/30 transition-all flex flex-col justify-between"
-            >
-              {/* Testimonial Quote */}
-              <p className="text-[14px] text-[#0E1412] leading-relaxed mb-5 italic font-normal">
-                &ldquo;{review.text}&rdquo;
-              </p>
-
-              {/* Author & Star Rating row */}
-              <div className="flex items-center justify-between pt-3 border-t border-[#F0F4F1]">
-                <div className="flex items-center gap-2.5">
-                  <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#CAD8CE]">
-                    <Image
-                      src={review.avatar}
-                      alt={review.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <div className="font-bold text-[13.5px] text-[#0E1412] leading-tight">
-                      {review.name}
-                    </div>
-                  </div>
-                </div>
-
-                {/* 5 Gold Stars */}
-                <div className="flex items-center gap-0.5 text-[#F59E0B]">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-current" />
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+    <section id="reviews" className="relative py-14 sm:py-18 lg:py-22 overflow-hidden bg-[#FBFDFB]">
+      {/* Background with Organic Foliage: top-left leaves */}
+      <div className="absolute inset-0 pointer-events-none -z-0">
+        <Image
+          src="/images/services_bg.jpg"
+          alt=""
+          fill
+          priority={false}
+          className="object-cover object-center opacity-95"
+          sizes="100vw"
+        />
       </div>
 
-      {/* View All Reviews Modal */}
-      {showAllReviewsModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200">
-          <div className="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-neutral-100 max-h-[85vh] overflow-y-auto">
-            <div className="flex items-center justify-between pb-4 mb-4 border-b border-gray-100">
-              <div>
-                <h3 className="text-xl font-bold text-[#151B19]">Customer Reviews & Ratings</h3>
-                <p className="text-xs text-[#5D6560]">Overall 4.9/5 from over 850+ verified homes</p>
-              </div>
-              <button
-                onClick={() => setShowAllReviewsModal(false)}
-                className="p-1 rounded-full text-gray-400 hover:text-black hover:bg-gray-100"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
+      {/* Mirrored bottom-right foliage accent */}
+      <div className="absolute -bottom-16 -right-16 w-[360px] h-[360px] pointer-events-none -z-0 rotate-180 opacity-80">
+        <Image
+          src="/images/services_bg.jpg"
+          alt=""
+          fill
+          priority={false}
+          className="object-cover"
+        />
+      </div>
 
-            <div className="space-y-4">
-              {[...reviews, ...additionalReviews].map((review, i) => (
-                <div key={i} className="p-4 rounded-xl bg-[#F8FAF8] border border-[#E8ECE9]">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2.5">
-                      <div className="relative w-8 h-8 rounded-full overflow-hidden border border-gray-200">
-                        <Image src={review.avatar} alt={review.name} fill className="object-cover" />
+      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          {/* Eyebrow with Divider Lines */}
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-3.5">
+            <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.14em]">
+              <Home className="w-3.5 h-3.5 text-[#102B4E]" />
+              <span>WHAT OUR CUSTOMERS SAY</span>
+            </div>
+            <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />
+          </div>
+
+          {/* Main Headline with Serif Typography and Green Underline Flourish */}
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.18] mb-2 sm:mb-2.5">
+            Real Homes.{" "}
+            <span className="relative inline-block text-[#2E9A00]">
+              Real Happiness.
+              {/* Subtle green underline flourish */}
+              <svg
+                className="absolute -bottom-1 left-0 w-full h-2.5 text-[#2E9A00] pointer-events-none"
+                viewBox="0 0 200 10"
+                fill="none"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M 2 6 C 50 10, 150 10, 198 3"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+          </h2>
+
+          {/* Supporting Subtitle */}
+          <p className="text-[14px] sm:text-[15.5px] text-[#4A5D73] font-normal leading-relaxed max-w-[620px] mx-auto">
+            Don&apos;t just take our word for it. Hear from families who trust us to keep their homes sparkling clean.
+          </p>
+        </div>
+
+        {/* Carousel Slider with Navigation Arrows */}
+        <div className="relative px-2 sm:px-6 lg:px-8">
+          {/* Left Arrow Button */}
+          <button
+            type="button"
+            onClick={handlePrev}
+            aria-label="Previous review"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
+          >
+            <ChevronLeft className="w-5 h-5 text-gray-700" />
+          </button>
+
+          {/* Carousel Viewport */}
+          <div
+            className="overflow-hidden w-full mx-auto"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div
+              className={`flex ${isTransitioning ? "transition-transform duration-500 ease-out" : ""}`}
+              style={{
+                transform: `translateX(-${(position / extendedReviews.length) * 100}%)`,
+                width: `${(extendedReviews.length / cardsPerView) * 100}%`,
+              }}
+              onTransitionEnd={handleTransitionEnd}
+            >
+              {extendedReviews.map((review, idx) => (
+                <div
+                  key={idx}
+                  style={{ width: `${(1 / extendedReviews.length) * 100}%` }}
+                  className="px-2 sm:px-2.5 flex"
+                >
+                  <div className="bg-white rounded-[20px] border border-[#EAF0EA] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(46,154,0,0.08)] hover:border-[#2E9A00]/30 transition-all duration-300 p-5 sm:p-6 flex flex-col justify-start w-full">
+                    {/* Top Row: Letter Avatar + Name & Stars */}
+                    <div className="flex items-center gap-3.5 mb-3.5">
+                      <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#EAF5E9] text-[#1E7B49] font-bold text-[18px] sm:text-[19px] flex items-center justify-center shrink-0">
+                        {review.initial}
                       </div>
-                      <div>
-                        <div className="font-bold text-xs text-[#151B19]">{review.name}</div>
-                        <div className="text-[10px] text-[#176B43] font-medium">{review.location}</div>
+                      <div className="flex flex-col">
+                        <span className="font-bold text-[15px] sm:text-[16px] text-[#102B4E] leading-tight">
+                          {review.name}
+                        </span>
+                        <div className="flex items-center gap-0.5 mt-1 text-[#F59E0B]">
+                          {[...Array(review.rating)].map((_, i) => (
+                            <Star key={i} className="w-3.5 h-3.5 fill-current stroke-none" />
+                          ))}
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-0.5 text-[#F59E0B]">
-                      {[...Array(review.rating)].map((_, si) => (
-                        <Star key={si} className="w-3 h-3 fill-current" />
-                      ))}
-                    </div>
+
+                    {/* Testimonial Quote */}
+                    <p className="text-[13.5px] sm:text-[14px] text-[#334155] leading-relaxed font-normal">
+                      &ldquo;{review.text}&rdquo;
+                    </p>
                   </div>
-                  <p className="text-xs text-[#5D6560] italic">&ldquo;{review.text}&rdquo;</p>
                 </div>
               ))}
             </div>
           </div>
+
+          {/* Right Arrow Button */}
+          <button
+            type="button"
+            onClick={handleNext}
+            aria-label="Next review"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
+          >
+            <ChevronRight className="w-5 h-5 text-gray-700" />
+          </button>
         </div>
-      )}
+
+        {/* 8 Pagination Indicator Dots */}
+        <div className="flex items-center justify-center gap-2 mt-7 sm:mt-8">
+          {reviews.map((_, dotIdx) => (
+            <button
+              key={dotIdx}
+              type="button"
+              onClick={() => handleDotClick(dotIdx)}
+              aria-label={`Go to review ${dotIdx + 1}`}
+              className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                activeDot === dotIdx
+                  ? "w-2.5 bg-[#102B4E]"
+                  : "w-2.5 bg-[#CBD5E1] hover:bg-[#94A3B8]"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
