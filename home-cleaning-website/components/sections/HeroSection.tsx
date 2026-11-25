@@ -49,8 +49,8 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             sizes="100vw"
           />
 
-          {/* Smooth left gradient overlay supporting crisp typography while keeping organic curve intact */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-[55%] lg:w-[50%] bg-gradient-to-r from-white via-white/70 to-transparent pointer-events-none" />
+          {/* Softened white gradient overlay for a seamless, natural photographic blend into the living room */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[56%] lg:w-[52%] bg-gradient-to-r from-white from-15% via-white/40 via-55% to-transparent pointer-events-none" />
 
           {/* 
             Sparkles Layer matching reference image:
@@ -143,7 +143,7 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             {/* 1. Eyebrow pill badge with clean modern outline house icon */}
             <div className="inline-flex items-center gap-2 bg-[#EAF4FE] border border-[#CDE3FD] px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold text-[#102B4E] mb-2 sm:mb-2.5 lg:mb-2.5 xl:mb-3 shadow-xs">
               <Home className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#102B4E] stroke-[2] shrink-0" />
-              <span>Professional Home Cleaning Services</span>
+              <span>Professional Home Cleaning Services in Bnagalore</span>
             </div>
 
             {/* 2. Main Headline: Bold, heavy, modern sans-serif font */}
@@ -265,43 +265,43 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
                 className="inline-flex items-center gap-3 bg-[#48B900] hover:bg-[#3FA200] text-white text-[14.5px] sm:text-[15.5px] xl:text-[16.5px] font-bold px-6 sm:px-7 xl:px-8 py-2.5 sm:py-3 xl:py-3 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95 cursor-pointer"
               >
                 <WhatsAppIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 xl:w-6 xl:h-6 fill-white shrink-0" />
-                <span>Book Your Cleaning Today</span>
+                <span>Get a Free Cleaning Quote</span>
                 <ArrowRight className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-white stroke-[2.5] ml-0.5 shrink-0" />
               </button>
             </div>
 
-            {/* 6. Social Proof Rating Strip: Perfectly aligned metrics, vertically centered icons, consistent typography */}
-            <div className="flex items-center gap-7 sm:gap-9 pt-1.5">
+            {/* 6. Social Proof Rating Strip: Refined 2-column mobile layout with zero overflow */}
+            <div className="flex items-center gap-3.5 sm:gap-6 lg:gap-8 pt-1.5 max-w-full">
               {/* Left: 5 Stars & 4.8/5 Customer Rating */}
-              <div className="flex items-center gap-3 shrink-0">
-                <div className="flex items-center gap-1 text-[#F59E0B] shrink-0">
+              <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
+                <div className="flex items-center gap-0.5 sm:gap-1 text-[#F59E0B] shrink-0">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] fill-current" />
+                    <Star key={i} className="w-[15px] h-[15px] sm:w-[18px] sm:h-[18px] lg:w-[20px] lg:h-[20px] fill-current" />
                   ))}
                 </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-[19px] sm:text-[21px] font-black text-[#0B2847] leading-none tracking-tight">
+                <div className="flex flex-col justify-center min-w-0">
+                  <span className="text-[18px] sm:text-[20px] lg:text-[21px] font-black text-[#0B2847] leading-none tracking-tight">
                     4.8/5
                   </span>
-                  <span className="text-[12.5px] sm:text-[13.5px] font-bold text-[#64748B] leading-none mt-1">
+                  <span className="text-[11.5px] sm:text-[12.5px] lg:text-[13.5px] font-bold text-[#64748B] leading-tight mt-1">
                     Customer Rating
                   </span>
                 </div>
               </div>
 
               {/* Centered subtle vertical separator */}
-              <div className="h-9 sm:h-10 w-[1.5px] bg-[#CBD5E1]/80 shrink-0 mx-1 sm:mx-1.5" />
+              <div className="h-8 sm:h-9 lg:h-10 w-[1.5px] bg-[#CBD5E1]/80 shrink-0" aria-hidden="true" />
 
               {/* Right: 1000+ Happy Homes with perfectly centered house icon */}
-              <div className="flex items-center gap-3 shrink-0">
+              <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                 <div className="shrink-0 flex items-center justify-center">
-                  <HouseHeartIcon className="w-[24px] h-[24px] sm:w-[26px] sm:h-[26px] text-[#0B2847]" />
+                  <HouseHeartIcon className="w-[21px] h-[21px] sm:w-[24px] sm:h-[24px] lg:w-[26px] lg:h-[26px] text-[#0B2847]" />
                 </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-[19px] sm:text-[21px] font-black text-[#0B2847] leading-none tracking-tight">
+                <div className="flex flex-col justify-center min-w-0">
+                  <span className="text-[18px] sm:text-[20px] lg:text-[21px] font-black text-[#0B2847] leading-none tracking-tight">
                     1000+
                   </span>
-                  <span className="text-[12.5px] sm:text-[13.5px] font-bold text-[#64748B] leading-none mt-1">
+                  <span className="text-[11.5px] sm:text-[12.5px] lg:text-[13.5px] font-bold text-[#64748B] leading-tight mt-1">
                     Happy Homes
                   </span>
                 </div>
