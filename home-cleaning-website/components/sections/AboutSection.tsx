@@ -33,7 +33,7 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
   ];
 
   return (
-    <section id="about" className="py-14 sm:py-18 lg:py-22 bg-white border-b border-[#F0F4F1] relative overflow-hidden">
+    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-white border-b border-[#F0F4F1] relative overflow-hidden">
       {/* Subtle organic corner curve accent */}
       <div 
         className="absolute -bottom-24 -right-24 w-72 h-72 sm:w-88 sm:h-88 rounded-full bg-gradient-to-tl from-[#EDF8EC]/60 via-[#F3FAF2]/30 to-transparent pointer-events-none" 

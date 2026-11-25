@@ -131,7 +131,7 @@ export function ReviewsSection() {
   };
 
   return (
-    <section id="reviews" className="relative py-10 sm:py-12 lg:py-14 overflow-hidden bg-[#FBFDFB]">
+    <section id="reviews" className="relative py-8 sm:py-10 lg:py-11 overflow-hidden bg-[#FBFDFB]">
       {/* Background with Organic Foliage: top-left leaves */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
@@ -157,7 +157,7 @@ export function ReviewsSection() {
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
+        <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
           {/* Eyebrow with Divider Lines */}
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2 sm:mb-2.5">
             <div className="h-[1px] w-10 sm:w-14 bg-[#2E9A00]/30 rounded-full" />

@@ -29,13 +29,13 @@ export function HowItWorksSection() {
   ];
 
   return (
-    <section id="how-it-works" className="py-14 sm:py-18 lg:py-22 bg-white border-b border-[#F0F4F1] relative overflow-hidden">
+    <section id="how-it-works" className="py-8 sm:py-10 lg:py-12 bg-white border-b border-[#F0F4F1] relative overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-10 xl:gap-12">
           {/* Left Column: Heading & 4 Steps */}
           <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center">
             {/* Section Eyebrow with Subtle Divider */}
-            <div className="flex items-center gap-3 sm:gap-3.5 mb-3 sm:mb-3.5">
+            <div className="flex items-center gap-3 sm:gap-3.5 mb-2.5 sm:mb-3">
               <span className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.16em] text-[#2E9A00]">
                 HOW IT WORKS
               </span>
@@ -43,7 +43,7 @@ export function HowItWorksSection() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] xl:text-[42px] font-extrabold text-[#102B4E] leading-[1.15] tracking-tight mb-8 sm:mb-10 lg:mb-12">
+            <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] xl:text-[42px] font-extrabold text-[#102B4E] leading-[1.15] tracking-tight mb-5 sm:mb-6 lg:mb-8">
               <span className="block">A Sparkling Home in</span>
               <span className="text-[#2E9A00] inline-flex items-center">
                 4 Simple Steps

@@ -62,7 +62,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
   ];
 
   return (
-    <section id="services" className="relative py-14 sm:py-18 lg:py-22 overflow-hidden bg-[#FBFDFB]">
+    <section id="services" className="relative py-8 sm:py-10 lg:py-12 overflow-hidden bg-[#FBFDFB]">
       {/* Background with Foliage and Organic Green Shapes */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
@@ -77,7 +77,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
 
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-7">
           {/* Eyebrow with Divider Lines */}
           <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-3.5">
             <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />

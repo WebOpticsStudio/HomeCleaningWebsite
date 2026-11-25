@@ -10,7 +10,7 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
   return (
-    <section id="cta-banner" className="py-12 sm:py-16 lg:py-20 bg-white">
+    <section id="cta-banner" className="py-8 sm:py-10 lg:py-12 bg-white">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] overflow-hidden bg-white border border-[#E2EBE2] shadow-[0_8px_30px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row items-stretch">
           
@@ -58,20 +58,33 @@ export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-[23px] sm:text-[27px] lg:text-[30px] xl:text-[32px] font-extrabold text-[#102B4E] tracking-tight leading-[1.2] mb-2 sm:mb-2.5">
+            <h2 className="text-[22px] sm:text-[27px] lg:text-[30px] xl:text-[32px] font-extrabold text-[#102B4E] tracking-tight leading-[1.25] sm:leading-[1.2] mb-2 sm:mb-2.5">
               Ready for a Cleaner,{" "}
-              <span className="relative inline-block text-[#2E9A00]">
-                Happier Home?
-                {/* Three small green accent lines at top-right of question mark - properly aligned with clear spacing */}
-                <span className="absolute -top-3.5 -right-6 sm:-top-4 sm:-right-7 select-none pointer-events-none text-[#2E9A00]" aria-hidden="true">
-                  <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-                    {/* Line 1 (top): steep ray */}
-                    <line x1="7" y1="3" x2="5" y2="10" />
-                    {/* Line 2 (middle): 40-degree ray cleanly separated */}
-                    <line x1="14" y1="13" x2="21" y2="7" />
-                    {/* Line 3 (bottom): nearly horizontal ray cleanly separated */}
-                    <line x1="17" y1="20" x2="25" y2="21" />
-                  </svg>
+              <span className="text-[#2E9A00]">
+                Happier Home
+                <span className="relative inline-block">
+                  ?
+                  {/* Three small green accent lines cleanly positioned at top-right of question mark without overlapping any text */}
+                  <span
+                    className="absolute top-0 left-full -mt-1 sm:-mt-1.5 ml-0.5 sm:ml-1 select-none pointer-events-none text-[#2E9A00]"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      className="w-5 h-5 sm:w-6 sm:h-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    >
+                      {/* Ray 1 (steep upper ray) */}
+                      <line x1="5" y1="2" x2="3" y2="8" />
+                      {/* Ray 2 (middle 45-degree ray) */}
+                      <line x1="10" y1="10" x2="18" y2="4" />
+                      {/* Ray 3 (lower horizontal ray) */}
+                      <line x1="13" y1="16" x2="21" y2="16" />
+                    </svg>
+                  </span>
                 </span>
               </span>
             </h2>
