@@ -143,7 +143,7 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             {/* 1. Eyebrow pill badge with clean modern outline house icon */}
             <div className="inline-flex items-center gap-2 bg-[#EAF4FE] border border-[#CDE3FD] px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold text-[#102B4E] mb-2 sm:mb-2.5 lg:mb-2.5 xl:mb-3 shadow-xs">
               <Home className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#102B4E] stroke-[2] shrink-0" />
-              <span>Professional Home Cleaning Services in Bnagalore</span>
+              <span>Professional Home Cleaning Services in Bangalore</span>
             </div>
 
             {/* 2. Main Headline: Bold, heavy, modern sans-serif font */}
@@ -271,7 +271,7 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             </div>
 
             {/* 6. Social Proof Rating Strip: Refined 2-column mobile layout with zero overflow */}
-            <div className="flex items-center gap-2.5 sm:gap-6 lg:gap-8 pt-1.5 max-w-full">
+            <div className="flex items-center gap-1.5 sm:gap-6 lg:gap-8 pt-1.5 max-w-full">
               {/* Left: 5 Stars & 4.8/5 Customer Rating */}
               <div className="flex items-center gap-2 sm:gap-2.5 min-w-0">
                 <div className="flex items-center gap-0.5 sm:gap-1 text-[#F59E0B] shrink-0">
