@@ -36,7 +36,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full overflow-hidden bg-gradient-to-b from-[#FAFCFA] via-[#FCFDFC] to-[#F7FAF6] py-5 sm:py-6 lg:py-7 flex items-center"
+      className="relative w-full overflow-hidden bg-gradient-to-b from-[#FAFCFA] via-[#FCFDFC] to-[#F7FAF6] py-8 sm:py-10 lg:py-12 flex items-center"
     >
       {/* Top-Left Clean Organic Foliage (Visible on tablet & desktop) */}
       <div className="hidden sm:block absolute top-0 left-0 w-16 lg:w-24 pointer-events-none z-10 select-none">
@@ -50,13 +50,13 @@ export function ContactSection() {
         />
       </div>
 
-      {/* Right Side Background: Living room with sofa, plant, table, towels & spray bottle */}
-      <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[36%] xl:w-[33%] max-w-[500px] pointer-events-none z-0 overflow-hidden select-none">
+      {/* Right Side Background: Ultra High Resolution living room with sofa, plant, table, towels & spray bottle */}
+      <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[38%] xl:w-[35%] max-w-[520px] pointer-events-none z-0 overflow-hidden select-none">
         <Image
-          src="/images/contact_decor_fade.png"
+          src="/images/contact_decor_ultra_hq.png"
           alt=""
           fill
-          sizes="(min-width: 1024px) 36vw, 100vw"
+          sizes="(min-width: 1024px) 38vw, 100vw"
           className="object-cover object-right-bottom"
           priority
         />
@@ -67,27 +67,27 @@ export function ContactSection() {
 
       {/* Main Content Container */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-5 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
           
-          {/* Left Column: Heading, Subtitle & 4 Contact Cards (Spans 7 cols on lg) */}
-          <div className="lg:col-span-7 xl:col-span-7">
+          {/* Left Column: Heading, Subtitle & 4 Contact Cards (Spans 6 cols on lg) */}
+          <div className="lg:col-span-6 xl:col-span-6">
             {/* Eyebrow Badge with flanking divider lines */}
-            <div className="flex items-center gap-2.5 sm:gap-3.5 mb-2 sm:mb-2.5">
-              <div className="h-[1.5px] w-7 sm:w-10 bg-[#2E9A00]/40 rounded-full" />
-              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 sm:py-1 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.14em]">
-                <Home className="w-3.5 h-3.5 text-[#102B4E]" />
+            <div className="flex items-center gap-3 sm:gap-3.5 mb-2 sm:mb-2.5">
+              <div className="h-[1px] w-10 sm:w-14 bg-[#48B900]/35 rounded-full" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.14em]">
+                <Home className="w-3.5 h-3.5 text-[#102B4E] shrink-0" />
                 <span>CONTACT US</span>
               </div>
-              <div className="h-[1.5px] w-7 sm:w-10 bg-[#2E9A00]/40 rounded-full" />
+              <div className="h-[1px] w-10 sm:w-14 bg-[#48B900]/35 rounded-full" />
             </div>
 
             {/* Main Headline with Serif Typography and Green Flourish Underline */}
-            <h1 className="text-[28px] sm:text-[34px] lg:text-[38px] xl:text-[42px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.14] mb-1.5 sm:mb-2">
+            <h1 className="text-[30px] sm:text-[35px] lg:text-[38px] xl:text-[42px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.14] mb-1.5 sm:mb-2">
               Let&apos;s Make Your Home{" "}
-              <span className="relative inline-block text-[#2E9A00]">
+              <span className="relative inline-block text-[#48B900]">
                 Sparkle Together
                 <svg
-                  className="absolute -bottom-1 left-0 w-full h-2.5 sm:h-3 text-[#2E9A00] pointer-events-none"
+                  className="absolute -bottom-1 left-0 w-full h-2.5 sm:h-3 text-[#48B900] pointer-events-none"
                   viewBox="0 0 200 12"
                   fill="none"
                   preserveAspectRatio="none"
@@ -103,75 +103,75 @@ export function ContactSection() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-[13.5px] sm:text-[14.5px] text-[#4A5568] max-w-lg mb-4 sm:mb-5 leading-relaxed font-normal">
+            <p className="text-[14px] sm:text-[15px] text-[#4A5568] max-w-md mb-4 sm:mb-5 leading-relaxed font-normal">
               Have a question or need a cleaning service?<br className="hidden sm:inline" /> We&apos;re here to help!
             </p>
 
             {/* 4 Contact Items Row: Icon on top, content underneath (Centered columns with vertical dividers) */}
-            <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-start gap-y-4 gap-x-3 sm:gap-0 max-w-[530px] pt-1">
+            <div className="grid grid-cols-2 sm:flex sm:items-center sm:justify-start gap-y-4 gap-x-3 sm:gap-0 max-w-[490px] pt-1">
               
               {/* 1. Call Us */}
               <a
                 href="tel:+919876543210"
-                className="flex flex-col items-center text-center group cursor-pointer sm:pr-4 lg:pr-5 shrink-0"
+                className="flex flex-col items-center text-center group cursor-pointer sm:pr-3.5 lg:pr-4 shrink-0"
               >
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] group-hover:bg-[#2E9A00] text-[#102B4E] group-hover:text-white flex items-center justify-center transition-colors mb-1.5 shadow-2xs">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] group-hover:bg-[#48B900] text-[#102B4E] group-hover:text-white flex items-center justify-center transition-colors mb-1.5 shadow-2xs">
                   <Phone className="w-4 h-4 text-[#102B4E] group-hover:text-white transition-colors" />
                 </div>
                 <div className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E] leading-tight">
                   Call Us
                 </div>
-                <div className="text-[11px] sm:text-[11.5px] text-[#102B4E] font-medium group-hover:text-[#2E9A00] transition-colors whitespace-nowrap mt-0.5">
+                <div className="text-[11px] sm:text-[11.5px] text-[#102B4E] font-medium group-hover:text-[#48B900] transition-colors whitespace-nowrap mt-0.5">
                   +91 98765 43210
                 </div>
               </a>
 
               {/* Vertical divider */}
-              <div className="hidden sm:block h-9 sm:h-10 w-[1px] bg-gray-200/90 mx-1 lg:mx-2 shrink-0 self-center" />
+              <div className="hidden sm:block h-9 sm:h-10 w-[1px] bg-gray-200/90 mx-1 lg:mx-1.5 shrink-0 self-center" />
 
               {/* 2. WhatsApp */}
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917338481383?text=Hi%21%20I%27m%20interested%20in%20your%20home%20cleaning%20services.%20I%27d%20like%20to%20know%20more%20about%20your%20services%20and%20pricing."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center text-center group cursor-pointer sm:px-4 lg:px-5 shrink-0"
+                className="flex flex-col items-center text-center group cursor-pointer sm:px-3.5 lg:px-4 shrink-0"
               >
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] group-hover:bg-[#2E9A00] text-[#2E9A00] group-hover:text-white flex items-center justify-center transition-colors mb-1.5 shadow-2xs">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] group-hover:bg-[#48B900] text-[#48B900] group-hover:text-white flex items-center justify-center transition-colors mb-1.5 shadow-2xs">
                   <WhatsAppIcon className="w-4 h-4" />
                 </div>
                 <div className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E] leading-tight">
                   WhatsApp
                 </div>
-                <div className="text-[11px] sm:text-[11.5px] text-[#102B4E] font-medium group-hover:text-[#2E9A00] transition-colors whitespace-nowrap mt-0.5">
+                <div className="text-[11px] sm:text-[11.5px] text-[#102B4E] font-medium group-hover:text-[#48B900] transition-colors whitespace-nowrap mt-0.5">
                   Chat Now
                 </div>
               </a>
 
               {/* Vertical divider */}
-              <div className="hidden sm:block h-9 sm:h-10 w-[1px] bg-gray-200/90 mx-1 lg:mx-2 shrink-0 self-center" />
+              <div className="hidden sm:block h-9 sm:h-10 w-[1px] bg-gray-200/90 mx-1 lg:mx-1.5 shrink-0 self-center" />
 
               {/* 3. Email Us */}
               <a
                 href="mailto:hello@cleanhome.in"
-                className="flex flex-col items-center text-center group cursor-pointer sm:px-4 lg:px-5 shrink-0"
+                className="flex flex-col items-center text-center group cursor-pointer sm:px-3.5 lg:px-4 shrink-0"
               >
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] group-hover:bg-[#2E9A00] text-[#2E9A00] group-hover:text-white flex items-center justify-center transition-colors mb-1.5 shadow-2xs">
-                  <Mail className="w-4 h-4 text-[#2E9A00] group-hover:text-white transition-colors" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] group-hover:bg-[#48B900] text-[#48B900] group-hover:text-white flex items-center justify-center transition-colors mb-1.5 shadow-2xs">
+                  <Mail className="w-4 h-4 text-[#48B900] group-hover:text-white transition-colors" />
                 </div>
                 <div className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E] leading-tight">
                   Email Us
                 </div>
-                <div className="text-[11px] sm:text-[11.5px] text-[#102B4E] font-medium group-hover:text-[#2E9A00] transition-colors whitespace-nowrap mt-0.5">
+                <div className="text-[11px] sm:text-[11.5px] text-[#102B4E] font-medium group-hover:text-[#48B900] transition-colors whitespace-nowrap mt-0.5">
                   hello@cleanhome.in
                 </div>
               </a>
 
               {/* Vertical divider */}
-              <div className="hidden sm:block h-9 sm:h-10 w-[1px] bg-gray-200/90 mx-1 lg:mx-2 shrink-0 self-center" />
+              <div className="hidden sm:block h-9 sm:h-10 w-[1px] bg-gray-200/90 mx-1 lg:mx-1.5 shrink-0 self-center" />
 
               {/* 4. Our Location */}
-              <div className="flex flex-col items-center text-center sm:pl-4 lg:pl-5 shrink-0">
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] text-[#2E9A00] flex items-center justify-center mb-1.5 shadow-2xs">
+              <div className="flex flex-col items-center text-center sm:pl-3.5 lg:pl-4 shrink-0">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#EAF5E9] text-[#48B900] flex items-center justify-center mb-1.5 shadow-2xs">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E] leading-tight">
@@ -186,15 +186,15 @@ export function ContactSection() {
           </div>
 
           {/* Right Column: "Send Us a Message" Floating White Card (Moved left towards center) */}
-          <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-start lg:-ml-6 xl:-ml-12">
-            <div className="w-full max-w-[345px] sm:max-w-[355px] bg-white rounded-[24px] sm:rounded-[26px] p-5 sm:p-5.5 lg:p-6 shadow-[0_12px_36px_rgba(16,43,78,0.08)] border border-[#E4EDE4] relative z-10 backdrop-blur-sm">
+          <div className="lg:col-span-6 xl:col-span-6 flex justify-center lg:justify-start lg:-ml-2 xl:-ml-6">
+            <div className="w-full max-w-[340px] sm:max-w-[350px] bg-white rounded-[24px] sm:rounded-[26px] p-5 sm:p-5.5 lg:p-6 shadow-[0_12px_36px_rgba(16,43,78,0.08)] border border-[#E4EDE4] relative z-10 backdrop-blur-sm">
               <h3 className="text-[20px] sm:text-[21.5px] font-serif font-bold text-[#102B4E] tracking-normal mb-3 sm:mb-3.5">
                 Send Us a Message
               </h3>
 
               {isSubmitted ? (
                 <div className="py-6 text-center animate-in fade-in zoom-in-95 duration-200">
-                  <div className="w-11 h-11 rounded-full bg-[#EAF5E9] text-[#2E9A00] flex items-center justify-center mx-auto mb-2.5 shadow-xs">
+                  <div className="w-11 h-11 rounded-full bg-[#EAF5E9] text-[#48B900] flex items-center justify-center mx-auto mb-2.5 shadow-xs">
                     <CheckCircle2 className="w-5 h-5" />
                   </div>
                   <h4 className="text-sm font-bold text-[#102B4E] mb-1">Message Sent!</h4>
@@ -207,7 +207,7 @@ export function ContactSection() {
                       setIsSubmitted(false);
                       setFormData({ name: "", phone: "", message: "" });
                     }}
-                    className="text-xs font-semibold text-[#2E9A00] hover:underline cursor-pointer"
+                    className="text-xs font-semibold text-[#48B900] hover:underline cursor-pointer"
                   >
                     Send another message
                   </button>
@@ -223,7 +223,7 @@ export function ContactSection() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Your Name"
-                      className="w-full pl-10 pr-3.5 py-2 sm:py-2.5 text-[13px] rounded-xl border border-gray-200/90 bg-[#FCFDFC] focus:bg-white focus:border-[#2E9A00] focus:ring-2 focus:ring-[#2E9A00]/15 outline-none transition-all placeholder:text-gray-400 text-[#102B4E]"
+                      className="w-full pl-10 pr-3.5 py-2 sm:py-2.5 text-[13px] rounded-xl border border-gray-200/90 bg-[#FCFDFC] focus:bg-white focus:border-[#48B900] focus:ring-2 focus:ring-[#48B900]/15 outline-none transition-all placeholder:text-gray-400 text-[#102B4E]"
                     />
                   </div>
 
@@ -236,7 +236,7 @@ export function ContactSection() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="Your Mobile Number"
-                      className="w-full pl-10 pr-3.5 py-2 sm:py-2.5 text-[13px] rounded-xl border border-gray-200/90 bg-[#FCFDFC] focus:bg-white focus:border-[#2E9A00] focus:ring-2 focus:ring-[#2E9A00]/15 outline-none transition-all placeholder:text-gray-400 text-[#102B4E]"
+                      className="w-full pl-10 pr-3.5 py-2 sm:py-2.5 text-[13px] rounded-xl border border-gray-200/90 bg-[#FCFDFC] focus:bg-white focus:border-[#48B900] focus:ring-2 focus:ring-[#48B900]/15 outline-none transition-all placeholder:text-gray-400 text-[#102B4E]"
                     />
                   </div>
 
@@ -249,7 +249,7 @@ export function ContactSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Your Message"
-                      className="w-full pl-10 pr-3.5 py-2 sm:py-2.5 text-[13px] rounded-xl border border-gray-200/90 bg-[#FCFDFC] focus:bg-white focus:border-[#2E9A00] focus:ring-2 focus:ring-[#2E9A00]/15 outline-none transition-all placeholder:text-gray-400 text-[#102B4E] resize-none min-h-[64px] sm:min-h-[70px]"
+                      className="w-full pl-10 pr-3.5 py-2 sm:py-2.5 text-[13px] rounded-xl border border-gray-200/90 bg-[#FCFDFC] focus:bg-white focus:border-[#48B900] focus:ring-2 focus:ring-[#48B900]/15 outline-none transition-all placeholder:text-gray-400 text-[#102B4E] resize-none min-h-[64px] sm:min-h-[70px]"
                     />
                   </div>
 
@@ -257,7 +257,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-2.5 rounded-full bg-[#2E9A00] hover:bg-[#268200] active:scale-[0.99] text-white font-bold text-[13.5px] flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all cursor-pointer mt-0.5"
+                    className="w-full py-2.5 rounded-full bg-[#48B900] hover:bg-[#3FA200] active:scale-[0.99] text-white font-bold text-[13.5px] flex items-center justify-center gap-2 shadow-sm hover:shadow-md transition-all cursor-pointer mt-0.5"
                   >
                     <Send className="w-4 h-4" />
                     <span>{isSubmitting ? "Sending..." : "Send Message"}</span>

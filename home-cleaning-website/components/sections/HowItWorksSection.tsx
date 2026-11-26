@@ -29,28 +29,28 @@ export function HowItWorksSection() {
   ];
 
   return (
-    <section id="how-it-works" className="py-8 sm:py-10 lg:py-12 bg-white border-b border-[#F0F4F1] relative overflow-hidden">
+    <section id="how-it-works" className="py-8 sm:py-10 lg:py-12 bg-white border-b border-[#E8EDE9] relative overflow-hidden">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-10 xl:gap-12">
           {/* Left Column: Heading & 4 Steps */}
           <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-center">
             {/* Section Eyebrow with Subtle Divider */}
             <div className="flex items-center gap-3 sm:gap-3.5 mb-2.5 sm:mb-3">
-              <span className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.16em] text-[#2E9A00]">
+              <span className="text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.16em] text-[#48B900]">
                 HOW IT WORKS
               </span>
-              <div className="h-[1.5px] w-14 sm:w-20 bg-[#2E9A00]/30 rounded-full" />
+              <div className="h-[1.5px] w-14 sm:w-20 bg-[#48B900]/30 rounded-full" />
             </div>
 
             {/* Main Headline */}
             <h2 className="text-[28px] sm:text-[34px] lg:text-[40px] xl:text-[42px] font-extrabold text-[#102B4E] leading-[1.15] tracking-tight mb-5 sm:mb-6 lg:mb-8">
               <span className="block">A Sparkling Home in</span>
-              <span className="text-[#2E9A00] inline-flex items-center">
+              <span className="text-[#48B900] inline-flex items-center">
                 4 Simple Steps
                 {/* Dual four-point green outline sparkles */}
                 <span className="inline-flex items-center gap-0.5 ml-2.5 sm:ml-3 select-none pointer-events-none" aria-hidden="true">
                   <svg
-                    className="w-5 h-5 sm:w-6 sm:h-6 text-[#2E9A00]"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-[#48B900]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -61,7 +61,7 @@ export function HowItWorksSection() {
                     <path d="M12 2C12 7.5 7.5 12 2 12C7.5 12 12 16.5 12 22C12 16.5 16.5 12 22 12C16.5 12 12 7.5 12 2Z" />
                   </svg>
                   <svg
-                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#2E9A00] -mt-1.5 -ml-0.5"
+                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#48B900] -mt-1.5 -ml-0.5"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -124,7 +124,7 @@ export function HowItWorksSection() {
               />
 
               {/* Three subtle green energy accent rays in top-left */}
-              <div className="absolute -top-3.5 -left-3.5 z-20 pointer-events-none select-none text-[#2E9A00]" aria-hidden="true">
+              <div className="absolute -top-3.5 -left-3.5 z-20 pointer-events-none select-none text-[#48B900]" aria-hidden="true">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                   <line x1="20" y1="4" x2="14" y2="10" />
                   <line x1="19" y1="14" x2="10" y2="15" />

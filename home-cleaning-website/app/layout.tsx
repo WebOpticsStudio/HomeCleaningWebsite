@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import "@/styles/globals.css";
+import { WhatsAppFloatingButton } from "@/components/ui/WhatsAppFloatingButton";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className={`${openSans.variable} ${playfair.variable} scroll-smooth`}>
       <body className="antialiased font-sans text-[#333D37] bg-white min-h-screen selection:bg-[#176B43]/20 selection:text-[#104D32]">
         {children}
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

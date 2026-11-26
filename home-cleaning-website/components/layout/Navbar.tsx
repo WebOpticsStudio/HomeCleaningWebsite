@@ -15,7 +15,7 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const isContactPage = pathname === "/contact";
-  const [activeSection, setActiveSection] = useState(isContactPage ? "contact" : "hero");
+  const [activeSection, setActiveSection] = useState(isContactPage ? "contact" : "home");
 
   useEffect(() => {
     if (isContactPage) {
@@ -32,7 +32,7 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
       setScrolled(window.scrollY > 15);
 
       // Section tracking for active green indicator on home page
-      const sections = ["contact", "about", "services", "hero"];
+      const sections = ["contact", "about", "services", "home"];
       const scrollPos = window.scrollY + 120;
 
       for (const id of sections) {
@@ -42,7 +42,7 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
           return;
         }
       }
-      setActiveSection("hero");
+      setActiveSection("home");
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -51,7 +51,7 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
   }, [isContactPage]);
 
   const navLinks = [
-    { label: "Home", href: isContactPage ? "/#hero" : "#hero", id: "hero" },
+    { label: "Home", href: isContactPage ? "/#home" : "#home", id: "home" },
     { label: "Services", href: isContactPage ? "/#services" : "#services", id: "services" },
     { label: "About Us", href: isContactPage ? "/#about" : "#about", id: "about" },
     { label: "Contact", href: isContactPage ? "/contact" : "#contact", id: "contact" },
@@ -85,12 +85,12 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
                 className={`relative py-1 tracking-[-0.01em] transition-colors duration-200 ${
                   isActive
                     ? "text-[#102B4E] font-bold"
-                    : "text-[#102B4E]/80 hover:text-[#45A915] font-semibold"
+                    : "text-[#102B4E]/80 hover:text-[#48B900] font-semibold"
                 }`}
               >
                 <span>{link.label}</span>
                 {isActive && (
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2.5px] bg-[#45A915] rounded-full transition-all duration-200" />
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2.5px] bg-[#48B900] rounded-full transition-all duration-200" />
                 )}
               </Link>
             );
@@ -101,19 +101,19 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
         <div className="hidden md:flex items-center shrink-0 z-10">
           <button
             onClick={onBookCleaning}
-            className="h-[36px] sm:h-[37px] px-6 sm:px-7 rounded-full inline-flex items-center justify-center bg-[#45A915] hover:bg-[#3C9212] text-white text-[14px] sm:text-[14.5px] font-bold font-sans tracking-wide whitespace-nowrap shadow-sm hover:shadow transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+            className="h-[36px] sm:h-[37px] px-6 sm:px-7 rounded-full inline-flex items-center justify-center bg-[#48B900] hover:bg-[#3FA200] text-white text-[14px] sm:text-[14.5px] font-bold font-sans tracking-wide whitespace-nowrap shadow-sm hover:shadow transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer"
           >
             <span>Book a Cleaning</span>
           </button>
         </div>
 
         {/* Mobile menu trigger */}
-        <div className="flex md:hidden items-center gap-2.5 z-10">
+        <div className="flex md:hidden items-center gap-2 z-10">
           <button
             onClick={onBookCleaning}
-            className="inline-flex items-center bg-[#45A915] text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-xs"
+            className="inline-flex items-center bg-[#48B900] hover:bg-[#3FA200] text-white text-[11.5px] font-bold px-2.5 py-1.5 rounded-full shadow-xs whitespace-nowrap"
           >
-            <span>Book</span>
+            <span>Book a Cleaning</span>
           </button>
 
           <button
@@ -141,12 +141,12 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`py-1 flex items-center justify-between transition-colors ${
-                    isActive ? "text-[#45A915] font-bold" : "hover:text-[#45A915]"
+                    isActive ? "text-[#48B900] font-bold" : "hover:text-[#48B900]"
                   }`}
                 >
                   <span>{link.label}</span>
                   {isActive && (
-                    <span className="w-2 h-2 rounded-full bg-[#45A915]" />
+                    <span className="w-2 h-2 rounded-full bg-[#48B900]" />
                   )}
                 </Link>
               );
@@ -159,7 +159,7 @@ export function Navbar({ onBookCleaning }: NavbarProps) {
                 setMobileMenuOpen(false);
                 if (onBookCleaning) onBookCleaning();
               }}
-              className="w-full flex items-center justify-center bg-[#45A915] text-white text-[14px] font-bold font-sans py-2.5 rounded-full shadow-sm cursor-pointer"
+              className="w-full flex items-center justify-center bg-[#48B900] hover:bg-[#3FA200] text-white text-[14px] font-bold font-sans py-2.5 rounded-full shadow-sm cursor-pointer"
             >
               <span>Book a Cleaning</span>
             </button>

@@ -26,7 +26,7 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
 
   return (
     <section
-      id="hero"
+      id="home"
       className="relative w-full overflow-hidden bg-white border-b border-[#E8EDE9] lg:h-[100dvh] lg:max-h-[100dvh] lg:min-h-0"
     >
       {/* 
@@ -141,8 +141,8 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
           <div className="max-w-2xl lg:max-w-[760px] xl:max-w-[820px]">
 
             {/* 1. Eyebrow pill badge with clean modern outline house icon */}
-            <div className="inline-flex items-center gap-2 bg-[#EAF4FE] border border-[#CDE3FD] px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold text-[#102B4E] mb-2 sm:mb-2.5 lg:mb-2.5 xl:mb-3 shadow-xs">
-              <Home className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#102B4E] stroke-[2] shrink-0" />
+            <div className="inline-flex items-center gap-2 bg-[#EAF4FE] border border-[#CDE3FD] px-3.5 py-1 sm:py-1 rounded-full text-[11px] sm:text-[11.5px] font-bold text-[#102B4E] mb-2 sm:mb-2.5 lg:mb-2.5 xl:mb-3 shadow-xs">
+              <Home className="w-3.5 h-3.5 text-[#102B4E] stroke-[2] shrink-0" />
               <span>Professional Home Cleaning Services in Bangalore</span>
             </div>
 
@@ -150,11 +150,11 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             <div className="relative mb-4 sm:mb-5 lg:mb-5 xl:mb-6">
               <h1 className="text-[48px] sm:text-[60px] md:text-[68px] lg:text-[71px] xl:text-[79px] 2xl:text-[85px] font-black leading-[1.03] tracking-[-0.035em]">
                 <span className="text-[#102B4E] block whitespace-nowrap">A Cleaner Home,</span>
-                <span className="text-[#45A915] relative inline-block mt-0.5 sm:mt-1 whitespace-nowrap">
+                <span className="text-[#48B900] relative inline-block mt-0.5 sm:mt-1 whitespace-nowrap">
                   A Healthier You
                   {/* Thin curved green underline beneath the headline */}
                   <svg
-                    className="absolute -bottom-2 sm:-bottom-2.5 lg:-bottom-2.5 xl:-bottom-3 left-0 w-full h-3 sm:h-3.5 xl:h-4 text-[#45A915]"
+                    className="absolute -bottom-2 sm:-bottom-2.5 lg:-bottom-2.5 xl:-bottom-3 left-0 w-full h-3 sm:h-3.5 xl:h-4 text-[#48B900]"
                     viewBox="0 0 360 14"
                     fill="none"
                     preserveAspectRatio="none"
@@ -211,9 +211,9 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
             {/* 3. Supporting text: Refined smaller green separator dots with comfortable spacing */}
             <div className="flex items-center gap-3 sm:gap-4 lg:gap-4 xl:gap-5 text-[15px] sm:text-[17px] lg:text-[16px] xl:text-[18px] font-bold text-[#1B2E4B] tracking-tight mb-2.5 sm:mb-3 lg:mb-3 xl:mb-4">
               <span>Reliable</span>
-              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#45A915] shrink-0 select-none" aria-hidden="true" />
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#48B900] shrink-0 select-none" aria-hidden="true" />
               <span>Affordable</span>
-              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#45A915] shrink-0 select-none" aria-hidden="true" />
+              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-[#48B900] shrink-0 select-none" aria-hidden="true" />
               <span>Professional</span>
             </div>
 
@@ -258,16 +258,30 @@ export function HeroSection({ onBookCleaning }: HeroSectionProps) {
               </div>
             </div>
 
-            {/* 5. Primary CTA: Large, rounded green WhatsApp button */}
-            <div className="mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4.5">
+            {/* 5. CTAs: Book a Cleaning + Explore Our Services */}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-3.5 mb-3 sm:mb-3.5 lg:mb-3.5 xl:mb-4.5">
               <button
                 onClick={onBookCleaning}
-                className="inline-flex items-center gap-3 bg-[#48B900] hover:bg-[#3FA200] text-white text-[14.5px] sm:text-[15.5px] xl:text-[16.5px] font-bold px-6 sm:px-7 xl:px-8 py-2.5 sm:py-3 xl:py-3 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                className="inline-flex items-center gap-2.5 bg-[#48B900] hover:bg-[#3FA200] text-white text-[14px] sm:text-[15px] xl:text-[16px] font-bold px-6 sm:px-7 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:scale-95 cursor-pointer whitespace-nowrap"
               >
-                <WhatsAppIcon className="w-5 h-5 sm:w-5.5 sm:h-5.5 xl:w-6 xl:h-6 fill-white shrink-0" />
-                <span>Get a Free Cleaning Quote</span>
-                <ArrowRight className="w-4.5 h-4.5 sm:w-5 sm:h-5 text-white stroke-[2.5] ml-0.5 shrink-0" />
+                <span>Book a Cleaning</span>
+                <ArrowRight className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-white stroke-[2.5] shrink-0" />
               </button>
+
+              <a
+                href="#services"
+                onClick={(e) => {
+                  const el = document.getElementById("services");
+                  if (el) {
+                    e.preventDefault();
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    window.history.pushState(null, "", "#services");
+                  }
+                }}
+                className="inline-flex items-center gap-2 bg-white/90 hover:bg-white text-[#102B4E] hover:text-[#48B900] border border-[#CBD5E1] hover:border-[#48B900]/40 text-[13.5px] sm:text-[14.5px] xl:text-[15px] font-bold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-2xs hover:shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 whitespace-nowrap cursor-pointer"
+              >
+                <span>Explore Our Services</span>
+              </a>
             </div>
 
             {/* 6. Social Proof Rating Strip: Refined 2-column mobile layout with zero overflow */}

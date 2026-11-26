@@ -13,27 +13,27 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
     {
       title: "Trusted Cleaners",
       description: "Trained & vetted professionals",
-      icon: <ShieldCheck className="w-4 h-4 text-[#2E9A00]" strokeWidth={2} />,
+      icon: <ShieldCheck className="w-4 h-4 text-[#48B900]" strokeWidth={2} />,
     },
     {
       title: "Safe Products",
       description: "Family & pet-friendly",
-      icon: <Leaf className="w-4 h-4 text-[#2E9A00]" strokeWidth={2} />,
+      icon: <Leaf className="w-4 h-4 text-[#48B900]" strokeWidth={2} />,
     },
     {
       title: "Flexible Scheduling",
       description: "Book at your convenience",
-      icon: <Calendar className="w-4 h-4 text-[#2E9A00]" strokeWidth={2} />,
+      icon: <Calendar className="w-4 h-4 text-[#48B900]" strokeWidth={2} />,
     },
     {
       title: "100% Satisfaction",
       description: "Your happiness comes first",
-      icon: <Smile className="w-4 h-4 text-[#2E9A00]" strokeWidth={2} />,
+      icon: <Smile className="w-4 h-4 text-[#48B900]" strokeWidth={2} />,
     },
   ];
 
   return (
-    <section id="about" className="py-8 sm:py-10 lg:py-12 bg-white border-b border-[#F0F4F1] relative overflow-hidden">
+    <section id="about" className="py-7 sm:py-8 lg:py-10 bg-white border-b border-[#E8EDE9] relative overflow-hidden">
       {/* Subtle organic corner curve accent */}
       <div 
         className="absolute -bottom-24 -right-24 w-72 h-72 sm:w-88 sm:h-88 rounded-full bg-gradient-to-tl from-[#EDF8EC]/60 via-[#F3FAF2]/30 to-transparent pointer-events-none" 
@@ -42,10 +42,10 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
 
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Balanced 50/50 Image and Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-12 xl:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 lg:gap-10 xl:gap-12">
           {/* Left Column: Exactly 50% Layout (6 columns of 12) */}
           <div className="lg:col-span-6 flex items-center justify-center lg:justify-start">
-            <div className="relative w-full aspect-square max-w-[480px] lg:max-w-none mx-auto lg:ml-0 rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#E5EAE5]">
+            <div className="relative w-full aspect-[4/3] max-w-[480px] lg:max-w-none max-h-[340px] sm:max-h-[370px] lg:max-h-[385px] mx-auto lg:ml-0 rounded-[22px] sm:rounded-[26px] overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-[#E5EAE5]">
               <Image
                 src="/images/why_choose_family_dog.jpg"
                 alt="Golden retriever resting comfortably with happy family in a sparkling clean home"
@@ -61,21 +61,21 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
           <div className="lg:col-span-6 flex flex-col justify-center">
             {/* Section Eyebrow with Subtle Thin Divider */}
             <div className="flex items-center gap-3 sm:gap-3.5 mb-2.5 sm:mb-3">
-              <span className="text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.16em] text-[#2E9A00]">
+              <span className="text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.16em] text-[#48B900]">
                 WHY CHOOSE CLEANHOME
               </span>
-              <div className="h-[1.5px] w-14 sm:w-20 bg-[#2E9A00]/30 rounded-full" />
+              <div className="h-[1.5px] w-14 sm:w-20 bg-[#48B900]/30 rounded-full" />
             </div>
 
             {/* Main Headline */}
             <h2 className="text-[28px] sm:text-[34px] lg:text-[36px] xl:text-[40px] font-extrabold text-[#102B4E] leading-[1.16] tracking-tight mb-3.5">
               <span className="block">Trusted by Families,</span>
-              <span className="text-[#2E9A00] inline-flex items-center">
+              <span className="text-[#48B900] inline-flex items-center">
                 Loved for Results.
                 {/* Refined dual four-point green sparkles */}
                 <span className="inline-flex items-center gap-0.5 ml-2 sm:ml-2.5 select-none pointer-events-none" aria-hidden="true">
                   <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#2E9A00]"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#48B900]"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -86,7 +86,7 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
                     <path d="M12 2C12 7.5 7.5 12 2 12C7.5 12 12 16.5 12 22C12 16.5 16.5 12 22 12C16.5 12 12 7.5 12 2Z" />
                   </svg>
                   <svg
-                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#2E9A00] -mt-1.5 -ml-0.5"
+                    className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#48B900] -mt-1.5 -ml-0.5"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -101,12 +101,12 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
             </h2>
 
             {/* Supporting Body Text: Enhanced Readability */}
-            <p className="text-[15px] sm:text-[15.5px] text-[#475569] leading-relaxed mb-8 max-w-xl font-normal">
+            <p className="text-[15px] sm:text-[15.5px] text-[#475569] leading-relaxed mb-5 sm:mb-6 max-w-xl font-normal">
               We&apos;re more than just a cleaning service — we&apos;re your partner in creating a cleaner, healthier and happier home.
             </p>
 
             {/* Four Benefits in an Equally Spaced 2x2 Grid with Smaller, Consistent Icon Backgrounds */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-10 gap-y-6 sm:gap-y-7 mb-9 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 sm:gap-x-10 gap-y-4.5 sm:gap-y-5 w-full">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3 w-full">
                   {/* Smaller, consistent circular green icon background */}
@@ -123,17 +123,6 @@ export function AboutSection({ onLearnMore }: AboutSectionProps) {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* CTA Button: Aligned Directly Beneath the Benefits */}
-            <div className="flex items-center justify-start">
-              <button
-                onClick={onLearnMore}
-                className="group inline-flex items-center gap-2.5 bg-[#2E9A00] hover:bg-[#278600] text-white text-[14px] sm:text-[14.5px] font-bold px-7 py-3 rounded-full shadow-sm hover:shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer"
-              >
-                <span>Learn More</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-              </button>
             </div>
           </div>
         </div>

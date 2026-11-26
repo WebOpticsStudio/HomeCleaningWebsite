@@ -36,9 +36,9 @@ export function BrandLogo({ className = "", size = "md", href = "/" }: BrandLogo
         <span className="text-[#102B4E]">Clean</span>
 
         {/* 'Home' in vibrant green with seamless, natural house-gable integrated into 'H' */}
-        <span className="text-[#45A915] inline-flex items-center">
+        <span className="text-[#48B900] inline-flex items-center">
           <svg
-            className={`${current.hIcon} shrink-0 text-[#45A915] transition-transform duration-200 group-hover:-translate-y-[0.5px]`}
+            className={`${current.hIcon} shrink-0 text-[#48B900] transition-transform duration-200 group-hover:-translate-y-[0.5px]`}
             viewBox="0 0 18 22"
             fill="none"
             aria-hidden="true"

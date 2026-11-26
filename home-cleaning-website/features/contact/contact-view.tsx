@@ -26,7 +26,7 @@ export function ContactView() {
       <BookingModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
-        initialService="Standard Home Cleaning"
+        initialService="Basic Home Cleaning"
       />
     </div>
   );

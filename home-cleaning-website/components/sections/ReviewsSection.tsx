@@ -131,7 +131,7 @@ export function ReviewsSection() {
   };
 
   return (
-    <section id="reviews" className="relative py-8 sm:py-10 lg:py-11 overflow-hidden bg-[#FBFDFB]">
+    <section id="reviews" className="relative py-8 sm:py-10 lg:py-12 overflow-hidden bg-[#FBFDFB] border-b border-[#E8EDE9]">
       {/* Background with Organic Foliage: top-left leaves */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
@@ -159,22 +159,22 @@ export function ReviewsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-5 sm:mb-6">
           {/* Eyebrow with Divider Lines */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2 sm:mb-2.5">
-            <div className="h-[1px] w-10 sm:w-14 bg-[#2E9A00]/30 rounded-full" />
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[10.5px] sm:text-[11px] font-bold uppercase tracking-[0.12em]">
-              <Home className="w-3.5 h-3.5 text-[#102B4E]" />
+          <div className="flex items-center justify-center gap-3 sm:gap-3.5 mb-2 sm:mb-2.5">
+            <div className="h-[1px] w-10 sm:w-14 bg-[#48B900]/35 rounded-full" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.14em]">
+              <Home className="w-3.5 h-3.5 text-[#102B4E] shrink-0" />
               <span>WHAT OUR CUSTOMERS SAY</span>
             </div>
-            <div className="h-[1px] w-10 sm:w-14 bg-[#2E9A00]/30 rounded-full" />
+            <div className="h-[1px] w-10 sm:w-14 bg-[#48B900]/35 rounded-full" />
           </div>
 
           {/* Main Headline with Serif Typography and Green Underline Flourish */}
           <h2 className="text-[26px] sm:text-[32px] lg:text-[38px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.18] mb-1.5 sm:mb-2">
             Real Homes.{" "}
-            <span className="relative inline-block text-[#2E9A00]">
+            <span className="relative inline-block text-[#48B900]">
               Real Happiness.
               <svg
-                className="absolute -bottom-1 left-0 w-full h-2.5 text-[#2E9A00] pointer-events-none"
+                className="absolute -bottom-1 left-0 w-full h-2.5 text-[#48B900] pointer-events-none"
                 viewBox="0 0 200 10"
                 fill="none"
                 preserveAspectRatio="none"
@@ -202,7 +202,7 @@ export function ReviewsSection() {
             type="button"
             onClick={handlePrev}
             aria-label="Previous review"
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#48B900] hover:border-[#48B900] transition-all duration-200 cursor-pointer"
           >
             <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
           </button>
@@ -227,7 +227,7 @@ export function ReviewsSection() {
                   style={{ width: `${(1 / extendedReviews.length) * 100}%` }}
                   className="px-2 sm:px-2.5 flex"
                 >
-                  <div className="bg-white rounded-[20px] border border-[#EAF0EA] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(46,154,0,0.08)] hover:border-[#2E9A00]/30 transition-all duration-300 p-5 sm:p-5.5 flex flex-col justify-start w-full min-h-[145px] sm:min-h-[155px]">
+                  <div className="bg-white rounded-[20px] border border-[#EAF0EA] shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(46,154,0,0.08)] hover:border-[#48B900]/30 transition-all duration-300 p-5 sm:p-5.5 flex flex-col justify-start w-full min-h-[145px] sm:min-h-[155px]">
                     {/* Top Row: Real Person Portrait Avatar + Name & Stars */}
                     <div className="flex items-center gap-3.5 mb-3">
                       <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden shrink-0 border border-neutral-100 shadow-xs">
@@ -267,7 +267,7 @@ export function ReviewsSection() {
             type="button"
             onClick={handleNext}
             aria-label="Next review"
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#2E9A00] hover:border-[#2E9A00] transition-all duration-200 cursor-pointer"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white border border-gray-200 shadow-sm hover:shadow-md flex items-center justify-center text-gray-700 hover:text-[#48B900] hover:border-[#48B900] transition-all duration-200 cursor-pointer"
           >
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" />
           </button>

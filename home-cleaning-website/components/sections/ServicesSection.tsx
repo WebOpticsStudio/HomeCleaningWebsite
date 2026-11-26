@@ -62,7 +62,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
   ];
 
   return (
-    <section id="services" className="relative py-8 sm:py-10 lg:py-12 overflow-hidden bg-[#FBFDFB]">
+    <section id="services" className="relative py-8 sm:py-10 lg:py-12 overflow-hidden bg-[#FBFDFB] border-b border-[#E8EDE9] scroll-mt-14 sm:scroll-mt-16">
       {/* Background with Foliage and Organic Green Shapes */}
       <div className="absolute inset-0 pointer-events-none -z-0">
         <Image
@@ -79,23 +79,23 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-7">
           {/* Eyebrow with Divider Lines */}
-          <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-3.5">
-            <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />
+          <div className="flex items-center justify-center gap-3 sm:gap-3.5 mb-3 sm:mb-3.5">
+            <div className="h-[1px] w-10 sm:w-14 bg-[#48B900]/35 rounded-full" />
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF5E9] text-[#102B4E] text-[11px] sm:text-[11.5px] font-bold uppercase tracking-[0.14em]">
-              <Home className="w-3.5 h-3.5 text-[#102B4E]" />
+              <Home className="w-3.5 h-3.5 text-[#102B4E] shrink-0" />
               <span>OUR SERVICES</span>
             </div>
-            <div className="h-[1px] w-12 sm:w-16 bg-[#2E9A00]/30 rounded-full" />
+            <div className="h-[1px] w-10 sm:w-14 bg-[#48B900]/35 rounded-full" />
           </div>
 
           {/* Main Headline */}
           <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-serif font-bold text-[#102B4E] tracking-tight leading-[1.18] mb-2 sm:mb-2.5">
             Sparkling Spaces,{" "}
-            <span className="relative inline-block text-[#2E9A00]">
+            <span className="relative inline-block text-[#48B900]">
               Happier You
               {/* Subtle green underline flourish */}
               <svg
-                className="absolute -bottom-1 left-0 w-full h-2.5 text-[#2E9A00] pointer-events-none"
+                className="absolute -bottom-1 left-0 w-full h-2.5 text-[#48B900] pointer-events-none"
                 viewBox="0 0 200 10"
                 fill="none"
                 preserveAspectRatio="none"
@@ -139,7 +139,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
               <div
                 key={service.id}
                 onClick={() => onSelectService && onSelectService(service.title)}
-                className={`group bg-white rounded-[20px] border border-[#E4ECE4] shadow-[0_4px_18px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(46,154,0,0.08)] hover:border-[#2E9A00]/40 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer ${gridColClass}`}
+                className={`group bg-white rounded-[20px] border border-[#E4ECE4] shadow-[0_4px_18px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_24px_rgba(72,185,0,0.08)] hover:border-[#48B900]/40 transition-all duration-300 overflow-hidden flex flex-col h-full cursor-pointer ${gridColClass}`}
               >
                 {/* 1. Full-width Service Photograph on Top (Consistent 145px height & aspect ratio) */}
                 <div className="relative w-full h-[145px] shrink-0 overflow-hidden bg-neutral-100">
@@ -156,12 +156,12 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                 <div className="p-5 flex flex-col flex-1 justify-between">
                   <div>
                     {/* Complete Service Name (Never truncated, wraps naturally to two lines) */}
-                    <h3 className="text-[20px] sm:text-[21px] font-semibold text-[#102B4E] leading-snug mb-2 group-hover:text-[#2E9A00] transition-colors">
+                    <h3 className="text-[20px] sm:text-[21px] font-semibold text-[#102B4E] leading-snug mb-2 group-hover:text-[#48B900] transition-colors">
                       {service.title}
                     </h3>
 
                     {/* Short Service Description (Fully readable within two lines, no aggressive truncation) */}
-                    <p className="text-[14px] sm:text-[14.5px] font-normal text-[#556476] leading-relaxed mb-4">
+                    <p className="text-[15px] sm:text-[15.5px] font-normal text-[#556476] leading-relaxed mb-4">
                       {service.description}
                     </p>
                   </div>
@@ -169,17 +169,17 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
                   {/* 3. Starting Price in Fresh Green & Circular Arrow Button aligned at bottom */}
                   <div className="flex items-center justify-between pt-3 mt-auto border-t border-[#F0F4F0]/90">
                     <div>
-                      <span className="block text-[11px] uppercase tracking-wider text-[#7A8B9E] font-medium leading-none mb-1">
+                      <span className="block text-[12px] uppercase tracking-wider text-[#7A8B9E] font-medium leading-none mb-1">
                         Starting from
                       </span>
-                      <span className="text-[16px] sm:text-[17px] font-bold text-[#2E9A00] leading-none">
+                      <span className="text-[16px] sm:text-[17px] font-bold text-[#48B900] leading-none">
                         {service.price}
                       </span>
                     </div>
 
                     <div
                       aria-label={`View ${service.title}`}
-                      className="w-8 h-8 rounded-full bg-[#102B4E] group-hover:bg-[#2E9A00] text-white flex items-center justify-center transition-all duration-200 shadow-sm shrink-0"
+                      className="w-8 h-8 rounded-full bg-[#102B4E] group-hover:bg-[#48B900] text-white flex items-center justify-center transition-all duration-200 shadow-sm shrink-0"
                     >
                       <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-transform duration-200" />
                     </div>

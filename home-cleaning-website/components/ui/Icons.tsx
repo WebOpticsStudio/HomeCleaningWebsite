@@ -147,7 +147,7 @@ export function HouseHeartIcon({ className = "w-6 h-6" }: { className?: string }
       <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <path
         d="M12 16.5c-2.4-1.8-3.5-3.2-3.5-4.5 0-1.2 1-2 2-2 .8 0 1.3.4 1.5.8.2-.4.7-.8 1.5-.8 1 0 2 .8 2 2 0 1.3-1.1 2.7-3.5 4.5z"
-        stroke="#45A915"
+        stroke="#48B900"
         strokeWidth="1.6"
         fill="none"
       />

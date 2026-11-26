@@ -10,7 +10,7 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
   return (
-    <section id="cta-banner" className="py-8 sm:py-10 lg:py-12 bg-white">
+    <section id="cta-banner" className="py-8 sm:py-10 lg:py-12 bg-white border-b border-[#E8EDE9]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-[24px] sm:rounded-[28px] lg:rounded-[32px] overflow-hidden bg-white border border-[#E2EBE2] shadow-[0_8px_30px_rgba(0,0,0,0.05)] flex flex-col lg:flex-row items-stretch">
           
@@ -60,13 +60,13 @@ export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
             {/* Main Headline */}
             <h2 className="text-[22px] sm:text-[27px] lg:text-[30px] xl:text-[32px] font-extrabold text-[#102B4E] tracking-tight leading-[1.25] sm:leading-[1.2] mb-2 sm:mb-2.5">
               Ready for a Cleaner,{" "}
-              <span className="text-[#2E9A00]">
+              <span className="text-[#48B900]">
                 Happier Home
                 <span className="relative inline-block">
                   ?
                   {/* Three small green accent lines cleanly positioned at top-right of question mark without overlapping any text */}
                   <span
-                    className="absolute top-0 left-full -mt-1 sm:-mt-1.5 ml-0.5 sm:ml-1 select-none pointer-events-none text-[#2E9A00]"
+                    className="absolute top-0 left-full -mt-1 sm:-mt-1.5 ml-0.5 sm:ml-1 select-none pointer-events-none text-[#48B900]"
                     aria-hidden="true"
                   >
                     <svg
@@ -99,7 +99,7 @@ export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
               {/* Green CTA Pill Button */}
               <button
                 onClick={onBookCleaning}
-                className="group inline-flex items-center gap-2 bg-[#2E9A00] hover:bg-[#278600] text-white text-[14.5px] sm:text-[15px] font-bold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-[0_4px_14px_rgba(46,154,0,0.28)] hover:shadow-[0_6px_20px_rgba(46,154,0,0.38)] transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer whitespace-nowrap shrink-0"
+                className="group inline-flex items-center gap-2 bg-[#48B900] hover:bg-[#3FA200] text-white text-[14.5px] sm:text-[15px] font-bold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-[0_4px_14px_rgba(72,185,0,0.28)] hover:shadow-[0_6px_20px_rgba(72,185,0,0.38)] transition-all duration-200 transform hover:-translate-y-0.5 active:scale-95 cursor-pointer whitespace-nowrap shrink-0"
               >
                 <span>Book Your Cleaning</span>
                 <ArrowRight className="w-4 h-4 text-white transition-transform duration-200 group-hover:translate-x-1" />
@@ -113,7 +113,7 @@ export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
                 {/* 1. Trusted Professionals */}
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EBF7E9] flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-4.5 h-4.5 text-[#2E9A00]" strokeWidth={2} />
+                    <ShieldCheck className="w-4.5 h-4.5 text-[#48B900]" strokeWidth={2} />
                   </div>
                   <div className="flex flex-col leading-[1.25]">
                     <span className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E]">Trusted</span>
@@ -124,7 +124,7 @@ export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
                 {/* 2. Flexible Scheduling */}
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EBF7E9] flex items-center justify-center shrink-0">
-                    <Calendar className="w-4.5 h-4.5 text-[#2E9A00]" strokeWidth={2} />
+                    <Calendar className="w-4.5 h-4.5 text-[#48B900]" strokeWidth={2} />
                   </div>
                   <div className="flex flex-col leading-[1.25]">
                     <span className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E]">Flexible</span>
@@ -135,7 +135,7 @@ export function CtaBanner({ onBookCleaning }: CtaBannerProps) {
                 {/* 3. Satisfaction Guaranteed */}
                 <div className="flex items-center gap-2.5">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EBF7E9] flex items-center justify-center shrink-0">
-                    <Smile className="w-4.5 h-4.5 text-[#2E9A00]" strokeWidth={2} />
+                    <Smile className="w-4.5 h-4.5 text-[#48B900]" strokeWidth={2} />
                   </div>
                   <div className="flex flex-col leading-[1.25]">
                     <span className="text-[12px] sm:text-[12.5px] font-bold text-[#102B4E]">Satisfaction</span>

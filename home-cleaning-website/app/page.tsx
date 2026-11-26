@@ -19,7 +19,7 @@ export default function HomePage() {
   const [selectedService, setSelectedService] = useState<string | undefined>(undefined);
 
   const handleOpenBooking = (service?: string) => {
-    setSelectedService(service || "Standard Home Cleaning");
+    setSelectedService(service || "Basic Home Cleaning");
     setIsBookingOpen(true);
   };
 
@@ -30,13 +30,13 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Sticky / Fixed Navigation Bar */}
-      <Navbar onBookCleaning={() => handleOpenBooking("Standard Home Cleaning")} />
+      <Navbar onBookCleaning={() => handleOpenBooking("Basic Home Cleaning")} />
 
       {/* Main Content Area */}
       <main className="flex-1">
         {/* Hero Section with integrated navbar on the dark navy background */}
         <HeroSection
-          onBookCleaning={() => handleOpenBooking("Standard Home Cleaning")}
+          onBookCleaning={() => handleOpenBooking("Basic Home Cleaning")}
           onWatchVideo={handleOpenVideo}
         />
 
@@ -53,7 +53,7 @@ export default function HomePage() {
         <ReviewsSection />
 
         {/* 9. Full-Width CTA Banner */}
-        <CtaBanner onBookCleaning={() => handleOpenBooking("Standard Home Cleaning")} />
+        <CtaBanner onBookCleaning={() => handleOpenBooking("Basic Home Cleaning")} />
 
         {/* 10. Contact Us Section */}
         <ContactSection />
