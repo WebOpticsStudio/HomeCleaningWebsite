@@ -31,6 +31,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Open Sans", "system-ui", "-apple-system", "sans-serif"],
+        serif: ["var(--font-serif)", "Playfair Display", "Georgia", "serif"],
       },
       boxShadow: {
         subtle: "0 2px 10px rgba(0, 0, 0, 0.04)",

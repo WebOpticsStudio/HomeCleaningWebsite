@@ -8,6 +8,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { CtaBanner } from "@/components/sections/CtaBanner";
+import { ContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/layout/Footer";
 import { BookingModal } from "@/components/modals/BookingModal";
 import { VideoModal } from "@/components/modals/VideoModal";
@@ -53,6 +54,9 @@ export default function HomePage() {
 
         {/* 9. Full-Width CTA Banner */}
         <CtaBanner onBookCleaning={() => handleOpenBooking("Standard Home Cleaning")} />
+
+        {/* 10. Contact Us Section */}
+        <ContactSection />
       </main>
 
       {/* 10. Clean 4-Column Footer */}

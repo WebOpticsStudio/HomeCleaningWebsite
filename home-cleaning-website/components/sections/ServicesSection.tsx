@@ -32,7 +32,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
       title: "Deep Cleaning",
       description: "Remove stubborn dirt and hidden grime with a thorough top-to-bottom clean.",
       price: "₹2,500",
-      image: "/images/service_deep_cleaning.jpg",
+      image: "/images/service_deep_cleaning_restored.jpg",
       alt: "Living room sofa with green and blue pillows on coffee table",
     },
     {
@@ -40,7 +40,7 @@ export function ServicesSection({ onSelectService }: ServicesSectionProps) {
       title: "Kitchen Cleaning",
       description: "Get rid of grease, stains and built-up dirt for a fresh, hygienic kitchen.",
       price: "₹2,500",
-      image: "/images/service_kitchen.jpg",
+      image: "/images/service_kitchen_restored.jpg",
       alt: "Sparkling modern clean kitchen with white cabinets and stove",
     },
     {

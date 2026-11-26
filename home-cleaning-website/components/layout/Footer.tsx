@@ -80,19 +80,19 @@ export function Footer() {
             <h4 className="font-bold text-[13.5px] text-[#151B19] mb-3">Quick Links</h4>
             <ul className="space-y-2 text-[12.5px]">
               <li>
-                <a href="#hero" className="hover:text-[#176B43] transition-colors">Home</a>
+                <Link href="/#hero" className="hover:text-[#176B43] transition-colors">Home</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#176B43] transition-colors">Services</a>
+                <Link href="/#services" className="hover:text-[#176B43] transition-colors">Services</Link>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#176B43] transition-colors">About Us</a>
+                <Link href="/#about" className="hover:text-[#176B43] transition-colors">About Us</Link>
               </li>
               <li>
-                <a href="#reviews" className="hover:text-[#176B43] transition-colors">Reviews</a>
+                <Link href="/#reviews" className="hover:text-[#176B43] transition-colors">Reviews</Link>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#176B43] transition-colors">Contact</a>
+                <Link href="/#contact" className="hover:text-[#176B43] transition-colors">Contact</Link>
               </li>
             </ul>
           </div>
@@ -102,41 +102,41 @@ export function Footer() {
             <h4 className="font-bold text-[13.5px] text-[#151B19] mb-3">Our Services</h4>
             <ul className="space-y-2 text-[12.5px]">
               <li>
-                <a href="#services" className="hover:text-[#176B43] transition-colors">Basic Home Cleaning</a>
+                <Link href="/#services" className="hover:text-[#176B43] transition-colors">Basic Home Cleaning</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#176B43] transition-colors">Deep Cleaning</a>
+                <Link href="/#services" className="hover:text-[#176B43] transition-colors">Deep Cleaning</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#176B43] transition-colors">Bathroom Cleaning</a>
+                <Link href="/#services" className="hover:text-[#176B43] transition-colors">Bathroom Cleaning</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#176B43] transition-colors">Kitchen Cleaning</a>
+                <Link href="/#services" className="hover:text-[#176B43] transition-colors">Kitchen Cleaning</Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-[#176B43] transition-colors">Move In / Move Out</a>
+                <Link href="/#services" className="hover:text-[#176B43] transition-colors">Move In / Move Out</Link>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Contact Us (Spans 3.5 cols) */}
-          <div id="contact" className="lg:col-span-3">
+          <div className="lg:col-span-3">
             <h4 className="font-bold text-[13.5px] text-[#151B19] mb-3">Contact Us</h4>
             <ul className="space-y-2 text-[12.5px]">
               <li className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#176B43] shrink-0 mt-0.5" />
-                <span>123 Clean Street, Zirakpur, Punjab 140603</span>
+                <span>Bangalore, Karnataka, India</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#176B43] shrink-0" />
-                <a href="tel:+15551234567" className="hover:text-[#176B43] transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+919876543210" className="hover:text-[#176B43] transition-colors">
+                  +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#176B43] shrink-0" />
-                <a href="mailto:hello@cleanhome.com" className="hover:text-[#176B43] transition-colors">
-                  hello@cleanhome.com
+                <a href="mailto:hello@cleanhome.in" className="hover:text-[#176B43] transition-colors">
+                  hello@cleanhome.in
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -153,9 +153,9 @@ export function Footer() {
             &copy; {currentYear} CleanHome. All rights reserved.
           </div>
           <div className="flex items-center space-x-6">
-            <a href="#about" className="hover:text-[#176B43] transition-colors">Privacy Policy</a>
+            <a href="/#about" className="hover:text-[#176B43] transition-colors">Privacy Policy</a>
             <span>|</span>
-            <a href="#about" className="hover:text-[#176B43] transition-colors">Terms of Service</a>
+            <a href="/#about" className="hover:text-[#176B43] transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>
